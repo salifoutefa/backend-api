@@ -31,7 +31,7 @@ export async function verifyPhoneNumber(req: Request, res: Response) {
 
       // Send the verification code via Firebase OTP to the user's phone number
       const appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container'); // Replace with your recaptcha container ID
-      const phoneNumberWithCountryCode = `+1${phoneNumber}`; // Replace with your country code if needed
+      const phoneNumberWithCountryCode = `+237${phoneNumber}`; // Replace with your country code if needed
 
       await firebase.auth().signInWithPhoneNumber(phoneNumberWithCountryCode, appVerifier);
 
